@@ -15,7 +15,7 @@ header('Content-Disposition: attachment; filename="laporan_bencana_' . date('Y-m
 $output = fopen('php://output', 'w');
 
 // Tambahkan UTF-8 BOM agar karakter tampil dengan benar di Excel
-fprintf($output, chr(100xEF) . chr(0xBB) . chr(0xBF));
+fprintf($output, chr(0xEF) . chr(0xBB) . chr(0xBF));
 
 // Menulis baris header
 $header = array('No', 'Tanggal Kejadian / Asesmen', 'Lokasi', 'Bencana', 'Dampak', 'Sumber', 'No Surat', 'Tanggal Surat', 'OPD Penerima');
